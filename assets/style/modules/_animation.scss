@@ -1,0 +1,76 @@
+@mixin animTransform($rotateX){
+  transform: scaleX(1) scaleY(1) scaleZ(1) rotateX(#{$rotateX}deg);
+
+}
+
+@keyframes frontBottom {
+  from{
+    @include animTransform(0);
+  }
+  to{
+    @include animTransform(90);
+  }
+}
+
+@keyframes frontTop {
+  from{
+    @include animTransform(0);
+  }
+  to{
+    @include animTransform(-90);
+  }
+}
+
+@keyframes bottomTop {
+  from{
+    @include animTransform(90);
+  }
+  to{
+    @include animTransform(0);
+  }
+}
+
+@keyframes bottomBottom {
+  from{
+    @include animTransform(90);
+  }
+  to{
+    @include animTransform(180);
+  }
+}
+
+@keyframes backTop {
+  from{
+    @include animTransform(180);
+  }
+  to{
+    @include animTransform(90);
+  }
+}
+
+@keyframes backBottom {
+  from{
+    @include animTransform(180);
+  }
+  to{
+    @include animTransform(270);
+  }
+}
+
+@keyframes topTop {
+  from{
+    @include animTransform(270);
+  }
+  to{
+    @include animTransform(180);
+  }
+}
+
+@keyframes topBottom {
+  from{
+    @include animTransform(270);
+  }
+  to{
+    @include animTransform(360);
+  }
+}

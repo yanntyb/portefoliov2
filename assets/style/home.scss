@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Raleway&display=swap');
+@import "./modules/input";
 
 #main{
   width: 100%;
@@ -34,6 +35,19 @@
   height: 100%;
   background-image: url("../image/background-1.jpeg");
   transform: translateZ(35vh);
+  .main-content{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    .main-title{
+      margin-top: 10%;
+      font-size: 150%;
+      text-transform: inherit !important;
+      font-family: 'Raleway', sans-serif;
+      color: black;
+      text-shadow: 2px 1px 2px rgba(128, 118, 81, 1);
+    }
+  }
 }
 
 #bottom{
@@ -43,6 +57,22 @@
   transform: rotateX(270deg) translateY(35vh);
   transform-origin: bottom center;
   background-image: url("../image/background-2.jpeg");
+  .main-content{
+    width: 100%;
+    height: 100%;
+    padding: 2%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    .sub-content{
+      width: 25%;
+      margin: 5%;
+      padding: 2%;
+      border: 1px solid black;
+    }
+  }
 }
 
 #back{
@@ -59,6 +89,12 @@
   height: 100%;
   background-image: url("../image/background-4.jpeg");
   transform: translateY(-35vh) rotateX(90deg);
+
+  .main-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  }
 }
 
 .cont{
@@ -77,19 +113,9 @@
   }
 }
 
-#front {
-  .main-content{
-    width: 100%;
-    height: 100%;
-    padding: 2%;
-    .main-title{
-      margin-top: 15%;
-      font-size: 150%;
-      text-transform: inherit !important;
-      font-family: 'Raleway', sans-serif;
-      color: black;
-      text-shadow: 2px 1px 2px rgba(128, 118, 81, 1);
-    }
+.main-content {
+  transform-style: preserve-3d;
+  &>*{
+    transform-style: preserve-3d;
   }
 }
-

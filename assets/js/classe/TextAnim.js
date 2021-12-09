@@ -73,7 +73,6 @@ class TextAnim {
         this.div.innerHTML = '';
         for(let span of this.content){
             this.div.innerHTML += span;
-            console.log(span);
             if(span !== this.content.slice(-1)[0]){
                 const br = document.createElement("br");
                 this.div.appendChild(br);

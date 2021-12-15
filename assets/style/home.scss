@@ -66,6 +66,9 @@
     justify-content: space-around;
     align-items: flex-start;
     flex-wrap: wrap;
+    .competence-list{
+      margin-top: 5%;
+    }
     .sub-content{
       width: 25%;
       margin: 5%;
@@ -81,6 +84,17 @@
   height: 100%;
   background-image: url("../image/background-3.jpeg");
   transform: translateZ(-35vh) rotateY(180deg) rotateZ(180deg);
+  .main-content{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    .competence-list{
+      margin-top: 5%;
+      .main-title{
+        text-align: center;
+      }
+    }
+  }
 }
 
 #top{
@@ -94,6 +108,9 @@
     position: absolute;
     width: 100%;
     height: 100%;
+    .competence-list{
+      margin-top: 5%;
+    }
   }
 }
 

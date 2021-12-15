@@ -5,6 +5,7 @@ import {Turn} from "./js/classe/Turn.mjs";
 import {Element} from "./js/classe/Element.mjs";
 import {TextAnim} from "./js/classe/TextAnim";
 import {CompetenceManager} from "./js/classe/CompetenceManager";
+import {Competence} from "./js/classe/Competence.mjs";
 
 const noFunction = () => {};
 
@@ -15,7 +16,10 @@ new Turn(2000,
         const bottomContentDiv = document.querySelector("#bottom .main-content");
         new CompetenceManager(bottomContentDiv,"competence");
     },
-    noFunction,
+    () => {
+        const backContentDiv = document.querySelector("#back .main-content");
+        new CompetenceManager(backContentDiv,"formation");
+    },
     () => {
     const backContentDiv = document.querySelector("#top .main-content");
         new CompetenceManager(backContentDiv,"contact");

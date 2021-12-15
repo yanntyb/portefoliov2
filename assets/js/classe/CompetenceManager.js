@@ -1,5 +1,6 @@
 import {Competence} from "./Competence.mjs";
 import "../../style/modules/_competence.scss";
+import "../../style/modules/_form.scss";
 
 class CompetenceManager{
     constructor(parent,api){
@@ -45,14 +46,45 @@ class CompetenceManager{
                     const dataContact = {
                        1: {
                            title: "Mail",
-                           content: "test"
+                           content:
+                               `
+                                    <div id="form-mail">
+                                        <form action="">
+                                            <div>
+                                                <input type="email" placeholder="Mail" required>
+                                            </div>
+                                            <div>
+                                                <input type="tel" placeholder="Numéro de contact" required>
+                                            </div>
+                                            <div>
+                                                <textarea cols="30" rows="10"></textarea>
+                                            </div>
+                                            <div>
+                                                <input type="submit">
+                                            </div>
+                                        </form>
+                                    </div>
+                                `
                        },
                        2:{
                            title: "Telephone",
-                           content: "test"
+                           content: "0616331402 du Lundi au vendredi de 9h a 17h"
                        }
                     }
                     this.createDom(dataContact,"#97a5c3",false);
+                    break
+                case "formation":
+                    const dataFormation = {
+                        1: {
+                            title: "Développeur Web/ Web mobile",
+                            content: ["Html", "Css / Sass", "Javascript / Typescript","Php","SQL","Git","Hébergement"]
+                        },
+                        2:{
+                            title: "Concepteur Développeur d'Application",
+                            content: ["1","2","3","4","5","6"]
+                        }
+                    }
+                    this.createDom(dataFormation,"#97a5c3");
                     break
             }
         }
